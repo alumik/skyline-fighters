@@ -15,7 +15,7 @@ Timer timer;
 
 void setup() {
     size(1200, 600);
-    textFont(createFont("simkai.ttf", 25));
+    textFont(createFont("楷体", 25));
     textAlign(CENTER, TOP);
 
     game_state = GAME_INIT;
