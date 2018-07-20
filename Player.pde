@@ -32,6 +32,7 @@ class Player {
         m_direction = MOVE_STOP;
         m_position = new PVector(width / 2 + m_player_type * 400, height / 2);
         m_bullets = new LinkedList<Bullet>();
+        m_shield_radius = 70;
 
         m_towers = new Tower[6];
         for (int i = 0; i < m_towers.length; i++) {
@@ -135,6 +136,9 @@ class Player {
 
     void hitTower(int index) {
         m_towers[index].removeHealth();
+        if (m_towers[index].getHealth() < 10) {
+            m_shield_radius = 90;
+        }
     }
 
     void showBullet() {
@@ -150,8 +154,6 @@ class Player {
     }
 
     void show() {
-        m_shield_radius = m_hit < 10 ? 70 : 90;
-
         fill(m_player_color_set[1]);
         stroke(m_player_color_set[0]);
         strokeWeight(2);

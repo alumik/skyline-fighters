@@ -25,6 +25,10 @@ class Tower {
         return (int)m_position.y + 50;
     }
 
+    int getHealth() {
+        return m_health;
+    }
+
     void removeHealth() {
         m_health--;
     }
