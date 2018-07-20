@@ -129,6 +129,7 @@ class Player {
         for (Tower tower : m_towers) {
             if (tower.destroyed()) {
                 game_state = GAME_OVER;
+                timer.pause();
                 winner = m_player_type * -1;
             }
         }

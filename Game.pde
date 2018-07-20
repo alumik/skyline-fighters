@@ -9,6 +9,7 @@ void resetGame() {
     winner = NO_PLAYER;
     game_state = GAME_RUN;
     game_paused = false;
+    timer.reset();
 }
 
 void runGame() {

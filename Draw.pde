@@ -28,7 +28,15 @@ void drawScore() {
     text("二号玩家 " + player_2.getScore() + " 分", width / 2, 150);
 }
 
+void drawTimer() {
+    fill(255);
+    textSize(TEXT_S3);
+    text("用时 " + nfc(timer.getTime() / 1000.0, 1) + " 秒", width / 2, 50);
+}
+
 void drawGamePauseScreen() {
+    drawTimer();
+
     fill(TEXT_ACCENT_COLOR);
     textSize(TEXT_S1);
     text("游戏暂停", width / 2, 250);
@@ -45,6 +53,7 @@ void drawGameInitScreen() {
 }
 
 void drawGameOverScreen() {
+    drawTimer();
     drawScore();
 
     fill(TEXT_ACCENT_COLOR);
@@ -57,6 +66,7 @@ void drawGameOverScreen() {
 }
 
 void drawGameRunScreen() {
+    drawTimer();
     drawScore();
 
     stroke(255);

@@ -11,6 +11,7 @@ int game_state;
 boolean game_paused;
 
 Player player_1, player_2;
+Timer timer;
 
 void setup() {
     size(1200, 600);
@@ -19,6 +20,7 @@ void setup() {
 
     game_state = GAME_INIT;
     initTowerColor();
+    timer = new Timer();
 }
 
 void draw() {
@@ -45,21 +47,25 @@ void keyPressed() {
     switch(game_state) {
         case GAME_INIT:
             resetGame();
+            timer.start();
             break;
         case GAME_OVER:
             if (key == ENTER) {
                 resetGame();
+                timer.start();
             }
             break;
         case GAME_RUN:
             if (game_paused) {
                 if (key == ENTER) {
                     game_paused = false;
+                    timer.start();
                 }
             } else {
                 switch(key) {
                     case ENTER:
                         game_paused = true;
+                        timer.pause();
                         break;
                     case 'w':
                         player_1.setDirection(MOVE_UP);
