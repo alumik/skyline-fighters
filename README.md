@@ -1,6 +1,9 @@
-# 天际战机
-项目基于 Processing 语言制作。
+<h1 align="center">天际战机</h1>
+
+项目基于 <a href="https://processing.org/" target="_blank">Processing</a> 语言制作。
+
 ## 游戏说明
+
 1. 玩家一可使用 `W/A/S/D` 移动战机 `C` 射击，玩家二可使用 `I/J/K/L` 移动战机 `.` 射击。
 2. 使用 `ENTER` 暂停游戏，使用 `ESC` 退出游戏。
 3. 游戏目标是攻击对方玩家身后的水晶，每个水晶有20点生命值。当水晶被击碎时游戏结束，击碎水晶的一方获胜。
