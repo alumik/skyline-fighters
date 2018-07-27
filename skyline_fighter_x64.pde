@@ -18,6 +18,8 @@ void setup() {
     textFont(createFont("楷体", 25));
     textAlign(CENTER, TOP);
 
+    surface.setTitle("天际战机");
+
     game_state = GAME_INIT;
     initTowerColor();
     timer = new Timer();
