@@ -1,6 +1,6 @@
 <h1 align="center">天际战机</h1>
 
-项目基于 <a href="https://processing.org/" target="_blank">Processing</a> 语言制作。
+项目基于 <a href="https://processing.org/">Processing</a> 语言制作。
 
 ## 游戏说明
 
