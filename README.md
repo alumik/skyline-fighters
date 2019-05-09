@@ -1,6 +1,6 @@
 # 天际战机
 
-项目基于 [Processing](https://processing.org/) 语言制作。
+项目基于 [Processing](https://processing.org/) 制作。
 
 ## 游戏说明
 
